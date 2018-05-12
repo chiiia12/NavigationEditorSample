@@ -9,12 +9,27 @@
         android:name="com.github.chiiia12.jetpacksample.ui.main.Page1Fragment"
         android:label="page1_fragment"
         tools:layout="@layout/page1_fragment">
+        <action
+            android:id="@+id/action_page1Fragment_to_page2Fragment2"
+            app:destination="@id/page2Fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/page2Fragment"
         android:name="com.github.chiiia12.jetpacksample.ui.main.Page2Fragment"
         android:label="page2_fragment"
-        tools:layout="@layout/page2_fragment"/>
+        tools:layout="@layout/page2_fragment">
+        <action
+            android:id="@+id/action_page2Fragment_to_secondActivity"
+            app:destination="@id/secondActivity"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
     <activity
         android:id="@+id/secondActivity"
         android:name="com.github.chiiia12.jetpacksample.SecondActivity"
