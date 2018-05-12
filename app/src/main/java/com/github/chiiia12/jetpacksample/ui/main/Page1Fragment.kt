@@ -22,7 +22,7 @@ class Page1Fragment : Fragment() {
                               savedInstanceState: Bundle?): View {
         val view = inflater.inflate(R.layout.page1_fragment, container, false)
         view.findViewById<Button>(R.id.button).setOnClickListener {
-            view.let { Navigation.findNavController(it).navigate(R.id.page2Fragment) }
+            Navigation.findNavController(view).navigate(R.id.page2Fragment)
         }
         return view
     }
