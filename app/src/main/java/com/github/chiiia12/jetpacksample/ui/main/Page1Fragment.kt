@@ -10,26 +10,26 @@ import android.widget.Button
 import androidx.navigation.Navigation
 import com.github.chiiia12.jetpacksample.R
 
-class MainFragment : Fragment() {
+class Page1Fragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = Page1Fragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: Page1ViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        val view = inflater.inflate(R.layout.main_fragment, container, false)
+        val view = inflater.inflate(R.layout.page1_fragment, container, false)
         view.findViewById<Button>(R.id.button).setOnClickListener {
-            view.let { Navigation.findNavController(it).navigate(R.id.blankFragment) }
+            view.let { Navigation.findNavController(it).navigate(R.id.page2Fragment) }
         }
         return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(Page1ViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

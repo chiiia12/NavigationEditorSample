@@ -2,17 +2,22 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
-            app:startDestination="@id/mainFragment">
+            app:startDestination="@id/page1Fragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.github.chiiia12.jetpacksample.ui.main.MainFragment"
-        android:label="main_fragment"
-        tools:layout="@layout/main_fragment">
+        android:id="@+id/page1Fragment"
+        android:name="com.github.chiiia12.jetpacksample.ui.main.Page1Fragment"
+        android:label="page1_fragment"
+        tools:layout="@layout/page1_fragment">
     </fragment>
     <fragment
-        android:id="@+id/blankFragment"
-        android:name="com.github.chiiia12.jetpacksample.ui.main.BlankFragment"
-        android:label="blank_fragment"
-        tools:layout="@layout/blank_fragment"/>
+        android:id="@+id/page2Fragment"
+        android:name="com.github.chiiia12.jetpacksample.ui.main.Page2Fragment"
+        android:label="page2_fragment"
+        tools:layout="@layout/page2_fragment"/>
+    <activity
+        android:id="@+id/secondActivity"
+        android:name="com.github.chiiia12.jetpacksample.SecondActivity"
+        android:label="activity_second"
+        tools:layout="@layout/activity_second"/>
 </navigation>
